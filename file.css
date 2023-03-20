@@ -142,14 +142,27 @@
 }
 .c24{
     position: fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background-color:#00000054;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    background-color:#00000049;
     z-index: 2;
+    transition:background-color 1s;
+}
+.r01{
+    display: none;
+}
+@keyframes a01{
+    0%{
+       top: -175px; 
+    }
+    100%{
+        top: 0px;
+    }
 }
 .c19{
+    animation: a01 0.5s;
     position:relative;
     margin:auto;
     width:80%;

@@ -61,10 +61,5 @@ function function1(){
 }
 function function2(){
     let a = document.getElementById("i09")
-    if(a.style.display != 'none'){
-    a.style.display = 'none';
-    }
-    else{
-        a.style.display = 'block';
-    }
+    a.classList.toggle("r01")
 }
