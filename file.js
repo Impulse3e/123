@@ -51,15 +51,37 @@ function printnum(){
         alert(a2);
     }
 }
-function function1(){
-    let a = ["i01", "i02", "i03", "i04", "i05", "i06", "i07", "i08"]
-    for(let i = 0; i < a.length; i++){
-        let c = document.getElementById(a[i])
-        c.classList.toggle("c08_button")
-        c.classList.toggle("c08_button2")
-    }
+    // function function1(){
+    //     let a = ["i01", "i02", "i03", "i04", "i05", "i06", "i07", "i08"]
+    //     for(let i = 0; i < a.length; i++){
+    //         let c = document.getElementById(a[i])
+    //         c.classList.toggle("c08_button")
+    //         c.classList.toggle("c08_button2")
+    //     }
+    // }
+    // function function2(){
+    //     let a = document.getElementById("i09")
+    //     a.classList.toggle("r01")
+    // }
+// const c06 = document.querySelector(".c06")
+// const c24 = document.querySelector(".c24")
+// const c22 = document.querySelector(".c22")
+// c06.addEventListener("click", function(){
+//     c24.classList.add("c24_1")
+// })
+function rand(){
+    let var1 = ["file/143945456384e57a5fb692.95730990tshirt_6.png", "file/143945456384e56926c2d9.15400078tshirt_3.png"]
 }
-function function2(){
-    let a = document.getElementById("i09")
-    a.classList.toggle("r01")
-}
+const c06 = document.querySelector(".c06");
+const c24 = document.querySelector('.c24');
+const c22 = document.querySelector('.c22');
+const c19 = document.querySelector('.c19');
+
+c06.addEventListener("click", function(){
+    c24.classList.add("c24_1");
+    c19.classList.add("c19_1");
+})
+c22.addEventListener("click", function(){
+    c24.classList.remove("c24_1")
+    c19.classList.remove("c19_1")
+})
