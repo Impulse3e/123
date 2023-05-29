@@ -69,8 +69,17 @@ function printnum(){
 // c06.addEventListener("click", function(){
 //     c24.classList.add("c24_1")
 // })
-function rand(){
-    let var1 = ["file/143945456384e57a5fb692.95730990tshirt_6.png", "file/143945456384e56926c2d9.15400078tshirt_3.png"]
+function rand2(){
+    var var1 = ["file/143945456384e57a5fb692.95730990tshirt_6.png", "file/143945456384e56926c2d9.15400078tshirt_3.png","file/t_shirt1.png", "file/t_shirt2.png"]
+    let var2 = ["i10", "i11"];
+    for(let i = 0; i < var2.length; i++){
+        let a = document.getElementById(var2[i])
+        a.src = rand(var1)
+    }
+}
+function rand(var1){
+    var rand = Math.floor(Math.random() * (var1.length));
+    return var1[rand];
 }
 const c06 = document.querySelector(".c06");
 const c24 = document.querySelector('.c24');
@@ -84,4 +93,78 @@ c06.addEventListener("click", function(){
 c22.addEventListener("click", function(){
     c24.classList.remove("c24_1")
     c19.classList.remove("c19_1")
+})
+let offset = 0;
+const onset1 = document.querySelector(".prev");
+const onset2 = document.querySelector('.next');
+const slider_line = document.querySelector(".slider-line")
+onset1.addEventListener("click", function(){
+    o = document.getElementById('left');
+    a = document.getElementById('right')
+    if(offset != 0){
+        offset = offset - 350;
+        slider_line.style.left = -offset + "px";
+        o.src = "file/left.png";
+        a.src = "file/right.png"
+    }
+    if(offset == 0){
+        o.src = "file/left1.png";
+        a.src = "file/right.png";4
+    }
+    // else{
+    //     offset = 700;
+    //     slider_line.style.left = -offset + "px";
+    // }
+})
+onset2.addEventListener("click", function(){
+     o = document.getElementById('right');
+     a = document.getElementById('left')
+     if(offset != 700){
+        offset = offset + 350;
+        slider_line.style.left = -offset + "px";
+        o.src = "file/right.png";
+        a.src = "file/left.png";
+    }
+    if(offset == 700){
+        o.src = "file/right1.png";
+        a.src = "file/left.png";
+    }
+    // else{
+    //     offset = 0;
+    //     slider_line.style.left = -offset + "px";
+    // }
+})
+const onset3 = document.querySelector(".prev1");
+const onset4 = document.querySelector('.next1');
+const slider_line1 = document.querySelector(".slider_line1")
+onset3.addEventListener("click", function(){
+    o = document.getElementById('left1');
+    a = document.getElementById('right1');
+    if(offset != 0){
+        offset = offset - 350;
+        o.src = "file/left.png";
+        a.src = "file/right.png";
+    }
+    else if(offset == 0){
+        offset = 700;
+    }
+slider_line1.style.left = -offset + "px";
+})
+onset4.addEventListener("click", function(){
+        o = document.getElementById('right1');
+        a = document.getElementById('left1')
+        // alert (offset);
+    if(offset != 700){
+        offset = offset + 350;
+        o.src = "file/right.png";
+        a.src = "file/left.png";
+    }
+    else if(offset == 700){
+        offset = 0;
+    }
+slider_line1.style.left = -offset + "px";
+    // else{
+    //     offset = 0;
+    //     slider_line.style.left = -offset + "px";
+    // }
 })

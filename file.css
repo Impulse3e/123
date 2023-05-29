@@ -211,3 +211,32 @@
 .c25{
     margin:auto 0px;
 }
+.slider-line{
+    display: flex;
+    position: relative;
+    width: 1400px;
+    left: 0px;
+    transition: 1s;
+}
+.c081{
+    width: 350px;
+    text-align: center;
+}
+.slider{
+    max-width: 700px;
+    margin: auto;
+    overflow: hidden;
+}
+.slider0{
+    display:flex;
+}
+.sliders{
+    margin:auto;
+}
+.slider_line1{
+    display: flex;
+    position: relative;
+    width: 1400px;
+    left: 0px;
+    transition: 1s;
+}

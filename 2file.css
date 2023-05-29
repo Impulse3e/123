@@ -43,3 +43,22 @@
     margin-top: 20px;
     margin-bottom: 50px;
 }
+.form_error{
+    color: red;
+    text-align:left;
+    font-size:large;
+    margin-top: 10px;
+    display: none;
+}
+input:valid:not(:placeholder-shown){
+    border: 5px solid green;
+}
+input:invalid:not(:placeholder-shown){
+    border: 5px solid red;
+}
+input:invalid:not(:placeholder-shown) + .form_error{
+    display: block;
+}
+.numbers::-webkit-inner-spin-button{ 
+    display: none;
+}
